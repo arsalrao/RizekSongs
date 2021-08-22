@@ -16,6 +16,8 @@ buildscript {
         retrofitVersion = '2.9.0'
         coroutineVersion = '1.4.1'
         coroutineAndroidVersion = '1.4.3'
+        koinVersion = '2.1.6'
+
     }
 
     repositories {
