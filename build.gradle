@@ -19,6 +19,8 @@ buildscript {
         koinVersion = '2.1.6'
         okhttpLoggingVersion = '4.9.1'
         navVersion = "2.3.5"
+        coroutineAdapterVersion = '0.9.2'
+
 
 
     }
