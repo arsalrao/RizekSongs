@@ -1,5 +1,6 @@
 package com.raoarsalan.rizeksongs.di.module
 
+import com.raoarsalan.core.viewmodel.ShareViewModel
 import com.raoarsalan.rizeksongs.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -10,6 +11,9 @@ object ViewModelModule {
         loadKoinModules(module {
             viewModel {
                 MainViewModel()
+            }
+            viewModel {
+                ShareViewModel()
             }
         })
     }

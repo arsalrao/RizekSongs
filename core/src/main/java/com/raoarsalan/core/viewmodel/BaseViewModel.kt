@@ -2,6 +2,7 @@ package com.raoarsalan.core.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.raoarsalan.core.common.SingleLiveEvent
+import com.raoarsalan.core.utils.NavigationCommand
 import com.raoarsalan.domain.entity.response.ErrorEntity
 
 abstract class BaseViewModel : ViewModel() {
@@ -15,6 +16,11 @@ abstract class BaseViewModel : ViewModel() {
      * Live data to handle loading
      */
     val loadingEvent = SingleLiveEvent<Boolean>()
+
+    val navigationCommands = SingleLiveEvent<NavigationCommand>()
+
+    lateinit var sharedViewModel: ShareViewModel
+
 
     fun setError(error: ErrorEntity.Error?) {
         errorEvent.value = error
