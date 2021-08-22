@@ -1,18 +1,19 @@
-package com.raoarsalan.songs.view.search
+package com.raoarsalan.songs.view.details
 
 import android.os.Bundle
 import android.view.View
 import com.raoarsalan.core.ui.base.BaseFragment
 import com.raoarsalan.songs.BR
 import com.raoarsalan.songs.R
-import com.raoarsalan.songs.databinding.FragmentSearchBinding
-import com.raoarsalan.songs.viewmodel.SearchTrackViewModel
+import com.raoarsalan.songs.databinding.FragmentTrackDetailsBinding
+import com.raoarsalan.songs.viewmodel.TrackDetailsViewModel
 
-class SearchTracksFragment :
-    BaseFragment<SearchTrackViewModel, FragmentSearchBinding>(SearchTrackViewModel::class) {
+
+class TrackDetailsFragment :
+    BaseFragment<TrackDetailsViewModel, FragmentTrackDetailsBinding>(TrackDetailsViewModel::class) {
 
     override val layoutRes: Int
-        get() = R.layout.fragment_search
+        get() = R.layout.fragment_track_details
     override val bindingVariable: Int
         get() = BR.viewModel
 

@@ -9,6 +9,17 @@
         android:id="@+id/searchTrackFragment"
         android:name="com.raoarsalan.songs.view.search.SearchTracksFragment"
         android:label="Search Track Fragment"
-        tools:layout="@layout/fragment_search"></fragment>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchTrackFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.raoarsalan.songs.view.details.TrackDetailsFragment"
+        android:label="Details Fragment"
+        tools:layout="@layout/fragment_track_details" />
 
 </navigation>
