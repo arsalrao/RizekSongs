@@ -9,7 +9,7 @@ object SearchVmModule {
     fun load() {
         loadKoinModules(module {
             viewModel {
-                SearchTrackViewModel()
+                SearchTrackViewModel(get())
             }
         })
     }
