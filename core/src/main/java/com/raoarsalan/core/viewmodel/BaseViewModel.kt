@@ -11,11 +11,20 @@ abstract class BaseViewModel : ViewModel() {
      */
     private val errorEvent = SingleLiveEvent<ErrorEntity.Error?>()
 
+    /**
+     * Live data to handle loading
+     */
+    val loadingEvent = SingleLiveEvent<Boolean>()
+
     fun setError(error: ErrorEntity.Error?) {
         errorEvent.value = error
     }
 
     fun getError(): SingleLiveEvent<ErrorEntity.Error?> {
         return errorEvent
+    }
+
+    fun showLoading(show: Boolean) {
+        loadingEvent.value = show
     }
 }
