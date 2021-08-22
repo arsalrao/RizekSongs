@@ -26,8 +26,8 @@ fun List<SpotifyDto.ArtistList>.mapList(): List<SpotifyEntity.ArtistList> {
         }
         list.add(
             SpotifyEntity.ArtistList(
-                externalUrl = it.externalUrl.map(),
-                followers = it.followers.map(),
+                externalUrl = it.externalUrl?.map(),
+                followers = it.followers?.map(),
                 genres = genres,
                 href = it.href,
                 id = it.id
@@ -46,7 +46,7 @@ fun List<SpotifyDto.SpotifyArtist>.mapArtist(): List<SpotifyEntity.SpotifyArtist
         list.add(
             SpotifyEntity.SpotifyArtist(
                 href = it.href,
-                items = it.items.mapList(),
+                items = it.items?.mapList(),
                 limit = it.limit,
                 next = it.next,
                 offset = it.offset,
@@ -56,7 +56,7 @@ fun List<SpotifyDto.SpotifyArtist>.mapArtist(): List<SpotifyEntity.SpotifyArtist
                 name = it.name,
                 type = it.type,
                 uri = it.uri,
-                externalUrl = it.externalUrl.map()
+                externalUrl = it.externalUrl?.map()
             )
         )
     }
@@ -85,12 +85,12 @@ fun List<SpotifyDto.AlbumPoster>.map(): List<SpotifyEntity.AlbumPoster> {
 
 fun SpotifyDto.Album.map() = SpotifyEntity.Album(
     albumType = albumType,
-    artist = artistResponseList.mapArtist(),
+    artist = artistResponseList?.mapArtist(),
     availableMarket = availableMarketList,
-    externalUrl = externalUrl.map(),
+    externalUrl = externalUrl?.map(),
     href = href,
     id = id,
-    images = imagesList.map(),
+    images = imagesList?.map(),
     name = name,
     releaseDate = releaseDate,
     releaseDayPrecision = releaseDayPrecision,
@@ -105,11 +105,11 @@ fun List<SpotifyDto.TracksList>.mapToTrackList(): List<SpotifyEntity.TracksList>
     this.forEach { it ->
         list.add(
             SpotifyEntity.TracksList(
-                externalUrl = it.externalUrl.map(),
+                externalUrl = it.externalUrl?.map(),
                 href = it.href,
                 id = it.id,
-                album = it.album.map(),
-                artist = it.artistResponseList.mapArtist(),
+                album = it.album?.map(),
+                artist = it.artistResponseList?.mapArtist(),
                 availableMarket = it.availableMarketList,
                 discNumber = it.discNumber,
                 durationMs = it.durationMs,
@@ -129,7 +129,7 @@ fun List<SpotifyDto.TracksList>.mapToTrackList(): List<SpotifyEntity.TracksList>
 
 fun SpotifyDto.SpotifyTracks.map() = SpotifyEntity.SpotifyTracks(
     href = href,
-    items = items.mapToTrackList(),
+    items = items?.mapToTrackList(),
     limit = limit,
     next = next,
     offset = offset,
@@ -139,7 +139,7 @@ fun SpotifyDto.SpotifyTracks.map() = SpotifyEntity.SpotifyTracks(
 
 fun SpotifyDto.SpotifyArtist.map() = SpotifyEntity.SpotifyArtist(
     href = href,
-    items = items.mapList(),
+    items = items?.mapList(),
     limit = limit,
     next = next,
     offset = offset,
@@ -149,7 +149,7 @@ fun SpotifyDto.SpotifyArtist.map() = SpotifyEntity.SpotifyArtist(
     name = name,
     type = type,
     uri = uri,
-    externalUrl = externalUrl.map()
+    externalUrl = externalUrl?.map()
 )
 
 fun SpotifyDto.Search.map() = SpotifyEntity.Search(

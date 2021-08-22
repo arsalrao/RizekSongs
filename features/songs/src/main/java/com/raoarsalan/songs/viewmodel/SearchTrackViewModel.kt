@@ -16,9 +16,9 @@ class SearchTrackViewModel constructor(private val spotifyUseCase: ISpotifyUseCa
         searchSpotify(
             "atif",
             "track,artist",
-            null,
-            null,
-            null
+            "US",
+            10,
+            5
         )
     }
 
@@ -36,11 +36,9 @@ class SearchTrackViewModel constructor(private val spotifyUseCase: ISpotifyUseCa
             spotifyUseCase.searchSpotify(query, type, market, limit, offSet).collect {
                 if (it is ResultResponse.Success) {
                     setError(error = ErrorEntity.Error(12, "succes"))
-                    //showLoading(false)
-                    //scoresList.addAll((it as ResultState.Success).data.artists.items)
+
                 } else {
                     setError(error = (it as ResultResponse.Error).error)
-                    // showLoading(false)
                 }
             }
         }
