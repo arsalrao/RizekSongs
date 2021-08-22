@@ -1,8 +1,12 @@
 package com.raoarsalan.rizeksongs
 
 import android.os.Bundle
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import com.raoarsalan.core.ui.base.BaseActivity
 import com.raoarsalan.rizeksongs.databinding.ActivityMainBinding
+import com.raoarsalan.songs.BR
+
 
 class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(MainViewModel::class) {
     override val layoutRes: Int
@@ -17,6 +21,11 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(MainViewMo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        NavigationUI.setupActionBarWithNavController(
+            this,
+            Navigation.findNavController(this, R.id.fragmentContainer)
+        )
 
     }
 }

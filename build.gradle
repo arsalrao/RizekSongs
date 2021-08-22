@@ -18,6 +18,8 @@ buildscript {
         coroutineAndroidVersion = '1.4.3'
         koinVersion = '2.1.6'
         okhttpLoggingVersion = '4.9.1'
+        navVersion = "2.3.5"
+
 
     }
 
