@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <!--   <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/loopIv"
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           app:srcCompat="@drawable/ic_baseline_loop_24"
+           android:layout_weight="0.2"
+           />
+
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/loopIv"
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           app:srcCompat="@drawable/ic_baseline_loop_24"
+           />
+
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/loopIv"
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           app:srcCompat="@drawable/ic_baseline_loop_24"
+           />
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/loopIv"
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           app:srcCompat="@drawable/ic_baseline_loop_24"
+           />
+   -->
+
+</LinearLayout>
