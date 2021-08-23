@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="gray">#737E89</color>
+    <color name="black">#FFFFFF</color>
+    <color name="white">#000000</color>
+    <color name="secondary_title">#9CA5AF</color>
+    <color name="seperator">#54545A</color>
+
+    <color name="track_inactive" tools:ignore="MissingDefaultResource">#282839</color>
+    <color name="search_bg">#666666</color>
+    <color name="hint">#ECECEC</color>
+
+    <color name="player_icon">#ECECEC</color>
+    <color name="player_icon_fill">#737E89</color>
+
+    <color name="bg_start">#000000</color>
+    <color name="bg_center">#59000000</color>
+</resources>

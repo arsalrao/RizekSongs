@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="play_button">play button</string>
+    <string name="songs">Songs</string>
+    <string name="search_hint">Search for song or an artist</string>
+    <string name="no_found">Couldn\'t find \n %s</string>
+    <string name="query_hint">Try searching again using \n a different spelling or keyword</string>
+</resources>

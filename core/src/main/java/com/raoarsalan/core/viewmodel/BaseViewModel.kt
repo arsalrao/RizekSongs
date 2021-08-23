@@ -33,4 +33,17 @@ abstract class BaseViewModel : ViewModel() {
     fun showLoading(show: Boolean) {
         loadingEvent.value = show
     }
+
+    val isNoDataFoundEvent = SingleLiveEvent<Boolean>()
+
+    fun setNoData(isNoData: Boolean) {
+        isNoDataFoundEvent.value = isNoData
+    }
+
+
+    val searchQuery = SingleLiveEvent<String>()
+
+    fun setQuery(query: String) {
+        searchQuery.value = "Couldn't find\n\"$query\""
+    }
 }
