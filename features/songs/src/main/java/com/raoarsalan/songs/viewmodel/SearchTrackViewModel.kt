@@ -26,33 +26,29 @@ class SearchTrackViewModel constructor(private val spotifyUseCase: ISpotifyUseCa
             R.layout.item_search
         ).bindExtra(BR.listener, this)
 
-    init {
-        searchSpotify(
-            "atif",
-            "track,artist",
-            "US",
-            10,
-            5
-        )
-    }
+
 
     fun searchSpotify(
         query: String,
-        type: String,
-        market: String?,
-        limit: Int?,
-        offSet: Int?
+        type: String = "track,artist",
+        market: String? = "US",
+        limit: Int? = 20,
+        offSet: Int? = 5
     ) {
         trackList.clear()
         showLoading(true)
+        setNoData(false)
+        setQuery(query)
 
         viewModelScope.launch {
             spotifyUseCase.searchSpotify(query, type, market, limit, offSet).collect {
                 if (it is ResultResponse.Success) {
+                    val track = it.data.tracks
                     showLoading(false)
                     trackList.addAll(
-                        (it as ResultResponse.Success).data.tracks.items ?: emptyList()
+                        track.items ?: emptyList()
                     )
+                    setNoData(track.total == 0)
                 } else {
                     showLoading(false)
                     setError(error = (it as ResultResponse.Error).error)

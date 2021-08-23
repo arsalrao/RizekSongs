@@ -7,5 +7,6 @@
     <color name="secondary_title">#9CA5AF</color>
 
     <color name="track_inactive" tools:ignore="MissingDefaultResource">#282839</color>
-
+    <color name="search_bg">#666666</color>
+    <color name="hint">#ECECEC</color>
 </resources>

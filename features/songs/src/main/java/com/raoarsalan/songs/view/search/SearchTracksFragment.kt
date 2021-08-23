@@ -2,6 +2,8 @@ package com.raoarsalan.songs.view.search
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.widget.doAfterTextChanged
+import androidx.lifecycle.lifecycleScope
 import com.raoarsalan.core.ui.base.BaseFragment
 import com.raoarsalan.songs.BR
 import com.raoarsalan.songs.R
@@ -18,6 +20,15 @@ class SearchTracksFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            dataBinding.search.searchEt.doAfterTextChanged {
+                if (it.isNullOrEmpty().not()) {
+                    viewModel.searchSpotify(it.toString())
+                }
+            }
+        }
+
 
     }
 }
