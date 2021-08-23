@@ -25,5 +25,7 @@ dependencies {
     //cardview
     implementation "androidx.cardview:cardview:1.0.0"
 
+    //fab
+    implementation "com.google.android.material:material:$fabVersion"
 
 }
