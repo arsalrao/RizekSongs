@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="com.raoarsalan.domain.entity.response.SpotifyEntity.TracksList" />
+
+        <variable
+            name="listener"
+            type="com.raoarsalan.songs.listener.ItemClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> listener.itemSelect(itemViewModel)}">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avatarCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="10dp"
+
+            app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avatarIv"
+                loadAvatar="@{itemViewModel.Album.images.get(0).url}"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+
+                tools:srcCompat="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trackTitleTv"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{itemViewModel.Album.name}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toEndOf="@+id/avatarCard"
+            app:layout_constraintTop_toTopOf="@+id/avatarCard"
+            tools:text="Mad Loveasfasfasfasfasfsafas" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/artistNameTv"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{itemViewModel.Album.artist.get(0).name}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatarCard"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toEndOf="@+id/avatarCard"
+            tools:text="Mad Loveasfasfasfasfasfsafas" />
+
+
+        <View
+            android:id="@+id/sepearator"
+            android:layout_width="0dp"
+            android:layout_height=".5dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+            app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/avatarCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

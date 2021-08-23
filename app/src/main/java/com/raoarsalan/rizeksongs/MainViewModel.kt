@@ -1,6 +1,6 @@
 package com.raoarsalan.rizeksongs
 
-import androidx.lifecycle.ViewModel
+import com.raoarsalan.core.viewmodel.BaseViewModel
 
-class MainViewModel : ViewModel() {
+class MainViewModel : BaseViewModel() {
 }
