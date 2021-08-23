@@ -23,6 +23,7 @@ buildscript {
         bindingCollectionAdapterVersion = '4.0.0'
         glideVersion = '4.10.0'
         fabVersion = '1.4.0'
+        paletteVersion = '1.0.0'
 
 
 

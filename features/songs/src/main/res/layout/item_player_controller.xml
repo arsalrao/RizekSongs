@@ -1,71 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:orientation="horizontal">
 
-       <androidx.appcompat.widget.AppCompatImageView
-           android:id="@+id/loopIv"
-           android:layout_width="24dp"
-           android:layout_height="24dp"
-           android:layout_gravity="center"
-           app:layout_constraintBottom_toBottomOf="@+id/playFab"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="@+id/playFab"
-           app:srcCompat="@drawable/ic_baseline_repeat_24" />
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/loopIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/playFab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/playFab"
+            app:srcCompat="@drawable/ic_baseline_repeat_24" />
 
 
-       <androidx.appcompat.widget.AppCompatImageView
-           android:id="@+id/previousIv"
-           android:layout_width="24dp"
-           android:layout_height="24dp"
-           android:layout_gravity="center"
-           app:layout_constraintBottom_toBottomOf="@+id/playFab"
-           app:layout_constraintEnd_toStartOf="@+id/playFab"
-           app:layout_constraintHorizontal_bias=".6"
-           app:layout_constraintStart_toEndOf="@+id/loopIv"
-           app:layout_constraintTop_toTopOf="@+id/playFab"
-           app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/previousIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/playFab"
+            app:layout_constraintEnd_toStartOf="@+id/playFab"
+            app:layout_constraintHorizontal_bias=".6"
+            app:layout_constraintStart_toEndOf="@+id/loopIv"
+            app:layout_constraintTop_toTopOf="@+id/playFab"
+            app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
 
-       <com.google.android.material.floatingactionbutton.FloatingActionButton
-           android:id="@+id/playFab"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:backgroundTint="@color/black"
-           android:contentDescription="@string/play_button"
-           app:borderWidth="0dp"
-           app:fabSize="normal"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           app:srcCompat="@drawable/ic_baseline_play_arrow_24"
-           app:tint="@color/white" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/playFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/play_button"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_play_arrow_24"
+            app:tint="@color/white" />
 
-       <androidx.appcompat.widget.AppCompatImageView
-           android:id="@+id/nextIv"
-           android:layout_width="24dp"
-           android:layout_height="24dp"
-           android:layout_gravity="center"
-           app:layout_constraintBottom_toBottomOf="@+id/playFab"
-           app:layout_constraintEnd_toStartOf="@+id/favIv"
-           app:layout_constraintHorizontal_bias=".4"
-           app:layout_constraintStart_toEndOf="@+id/playFab"
-           app:layout_constraintTop_toTopOf="@+id/playFab"
-           app:srcCompat="@drawable/ic_next_24" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nextIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/playFab"
+            app:layout_constraintEnd_toStartOf="@+id/favIv"
+            app:layout_constraintHorizontal_bias=".4"
+            app:layout_constraintStart_toEndOf="@+id/playFab"
+            app:layout_constraintTop_toTopOf="@+id/playFab"
+            app:srcCompat="@drawable/ic_next_24" />
 
-       <androidx.appcompat.widget.AppCompatImageView
-           android:id="@+id/favIv"
-           android:layout_width="24dp"
-           android:layout_height="24dp"
-           android:layout_gravity="center"
-           app:layout_constraintBottom_toBottomOf="@+id/playFab"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintTop_toTopOf="@+id/playFab"
-           app:srcCompat="@drawable/ic_baseline_favorite_24"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/favIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/playFab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/playFab"
+            app:srcCompat="@drawable/ic_baseline_favorite_24"
 
-           />
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

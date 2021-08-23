@@ -28,4 +28,7 @@ dependencies {
     //fab
     implementation "com.google.android.material:material:$fabVersion"
 
+    //PALETTE
+    implementation "androidx.palette:palette:$paletteVersion"
+
 }
