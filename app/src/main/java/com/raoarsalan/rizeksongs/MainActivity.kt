@@ -1,6 +1,7 @@
 package com.raoarsalan.rizeksongs
 
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.raoarsalan.core.ui.base.BaseActivity
@@ -22,8 +23,9 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(MainViewMo
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        NavigationUI.setupActionBarWithNavController(
-            this,
+
+        NavigationUI.setupWithNavController(
+            Toolbar(this),
             Navigation.findNavController(this, R.id.fragmentContainer)
         )
 
