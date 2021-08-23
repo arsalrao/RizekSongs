@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <color name="gray">#737E89</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="secondary_title">#9CA5AF</color>
+
+    <color name="track_inactive" tools:ignore="MissingDefaultResource">#282839</color>
 
 </resources>

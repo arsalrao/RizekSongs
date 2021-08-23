@@ -72,7 +72,7 @@
             android:id="@+id/artistTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="8dp"
             android:text="@{viewModel.sharedViewModel.track.artist.get(0).name}"
             android:textColor="@color/secondary_title"
             android:textSize="24sp"

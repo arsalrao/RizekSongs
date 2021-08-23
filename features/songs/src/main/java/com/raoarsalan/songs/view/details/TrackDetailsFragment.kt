@@ -13,6 +13,7 @@ import com.bumptech.glide.request.transition.Transition
 import com.raoarsalan.core.ui.base.BaseFragment
 import com.raoarsalan.songs.BR
 import com.raoarsalan.songs.R
+import com.raoarsalan.songs.common.getColorWithAlpha
 import com.raoarsalan.songs.databinding.FragmentTrackDetailsBinding
 import com.raoarsalan.songs.viewmodel.TrackDetailsViewModel
 
@@ -49,6 +50,11 @@ class TrackDetailsFragment :
             val defaultColor = ContextCompat.getColor(requireContext(), R.color.white)
             val color = palette?.getVibrantColor(defaultColor) ?: defaultColor
             dataBinding.playerItem.playFab.backgroundTintList = ColorStateList.valueOf(color)
+            dataBinding.playerItem.slider.let {
+                it.thumbTintList = ColorStateList.valueOf(color)
+                it.trackActiveTintList = ColorStateList.valueOf(color)
+                it.haloTintList = ColorStateList.valueOf(getColorWithAlpha(color, 0.24f))
+            }
         }
     }
 
